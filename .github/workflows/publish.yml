@@ -13,26 +13,44 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
+      
       - uses: actions/checkout@v2
-      - name: Set up Python
+      
+      - name: Set up Python 3.11
         uses: actions/setup-python@v2
         with:
-          python-version: "3.8"
+          python-version: "3.11"
+      
       - uses: actions/cache@v2
         id: cache
         with:
           path: ${{ env.pythonLocation }}
           key: ${{ runner.os }}-python-${{ env.pythonLocation }}-${{ hashFiles('pyproject.toml') }}-publish
+      
       - name: Install poetry
         if: steps.cache.outputs.cache-hit != 'true'
         run: pip install poetry
+      
+      - name: Fix pyproject.toml
+        run: |
+          # pyproject.toml에서 author 정보 수정 (필요한 경우)
+          if [ -f pyproject.toml ]; then
+            sed -i 's/authors = \[.*\]/authors = ["Danny Park <danny@example.com>"]/' pyproject.toml
+            # poetry.lock 파일 재생성 
+            poetry lock
+          fi
+      
       - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: poetry install
-      - name: Publish
+      
+      - name: Build and Publish
         env:
           POETRY_PYPI_TOKEN_PYPI: ${{ secrets.PYPI_TOKEN }}
-        run: bash scripts/publish.sh
+        run: |
+          poetry build
+          poetry publish
+      
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
