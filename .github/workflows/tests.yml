@@ -38,10 +38,9 @@ jobs:
     - name: Test
       run: |
         poetry run pytest --cov=rcs_pydantic tests/ --cov-report=xml
-    - uses: codecov/codecov-action@v2
+    - uses: codecov/codecov-action@v3
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         files: coverage.xml
-        fail_ci_if_error: true # optional (default = false)
-        verbose: true # optional (default = false)
-
+        fail_ci_if_error: false  # 일단 false로 설정하여 이 단계에서 실패해도 워크플로우가 중단되지 않도록 함
+        verbose: true
