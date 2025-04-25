@@ -7,15 +7,15 @@
 <a href="https://codecov.io/gh/Danny64Park/rcs-pydantic-automata" target="_blank">
     <img src="https://img.shields.io/codecov/c/github/Danny64Park/rcs-pydantic-automata?color=%2334D058" alt="Coverage">
 </a>
-<a href="https://pypi.org/project/rcs-pydantic" target="_blank">
-    <img src="https://img.shields.io/pypi/v/rcs-pydantic?color=%2334D058&label=pypi%20package" alt="Package version">
+<a href="https://pypi.org/project/rcs-pydantic-automata" target="_blank">
+    <img src="https://img.shields.io/pypi/v/rcs-pydantic-automata?color=%2334D058&label=pypi%20package" alt="Package version">
 </a>
-<a href="https://pypi.org/project/rcs-pydantic" target="_blank">
-    <img src="https://img.shields.io/pypi/pyversions/rcs-pydantic.svg?color=%2334D058" alt="Supported Python versions">
+<a href="https://pypi.org/project/rcs-pydantic-automata" target="_blank">
+    <img src="https://img.shields.io/pypi/pyversions/rcs-pydantic-automata.svg?color=%2334D058" alt="Supported Python versions">
 </a>
 </p>
 
-- [RCS-PYDANTIC](#rcs-pydantic)
+- [RCS-PYDANTIC-AUTOMATA](#rcs-pydantic-automata)
   - [Introduce](#introduce)
   - [Installation](#installation)
   - [Dependency](#dependency)
@@ -38,7 +38,7 @@
 ## Installation
 
 ```sh
-pip install rcs-pydantic
+pip install rcs-pydantic-automata
 ```
 
 ## Dependency
