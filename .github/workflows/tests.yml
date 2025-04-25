@@ -17,8 +17,8 @@ jobs:
         # pyproject.toml에서 author 정보 수정
         if [ -f pyproject.toml ]; then
           sed -i 's/authors = \[.*\]/authors = ["Danny Park <danny@example.com>"]/' pyproject.toml
-          # poetry.lock 파일 재생성
-          poetry lock --no-update
+          # poetry.lock 파일 재생성 (--no-update 옵션 제거)
+          poetry lock
         fi
     - name: Install dependencies
       run: |
@@ -45,8 +45,8 @@ jobs:
         # pyproject.toml에서 author 정보 수정
         if [ -f pyproject.toml ]; then
           sed -i 's/authors = \[.*\]/authors = ["Danny Park <danny@example.com>"]/' pyproject.toml
-          # poetry.lock 파일 재생성
-          poetry lock --no-update
+          # poetry.lock 파일 재생성 (--no-update 옵션 제거)
+          poetry lock
         fi
     - name: Install dependencies
       run: |
