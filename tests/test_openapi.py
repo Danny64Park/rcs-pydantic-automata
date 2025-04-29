@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from rcs_pydantic import SendInfo
+from rcs_pydantic_automata import SendInfo
 
 app = FastAPI()
 

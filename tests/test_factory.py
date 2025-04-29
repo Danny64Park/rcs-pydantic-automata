@@ -1,7 +1,7 @@
 import pytest
 from faker import Faker
 
-from rcs_pydantic import enums
+from rcs_pydantic_automata import enums
 
 from . import factory
 
