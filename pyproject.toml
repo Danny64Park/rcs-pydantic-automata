@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "rcs-pydantic-automata"
-version = "1.0.2"
+version = "1.0.0"
 description = ""
 authors = ["danny.park@automata.ooo"]
 keywords = ["pydantic", "rcs", "fastapi"]
