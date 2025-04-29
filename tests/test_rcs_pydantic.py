@@ -1,10 +1,10 @@
 import pytest
 from faker import Faker
 
-from rcs_pydantic import enums
-from rcs_pydantic.errors import ErrorCodeEnum, KTErrorCodeEnum, MaaPErrorCodeEnum, RcsBizCenterErrorCodeEnum
-from rcs_pydantic.exceptions import MessageException
-from rcs_pydantic.main import RcsMessage
+from rcs_pydantic_automata import enums
+from rcs_pydantic_automata.errors import ErrorCodeEnum, KTErrorCodeEnum, MaaPErrorCodeEnum, RcsBizCenterErrorCodeEnum
+from rcs_pydantic_automata.exceptions import MessageException
+from rcs_pydantic_automata.main import RcsMessage
 
 from . import factory
 

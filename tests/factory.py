@@ -4,7 +4,7 @@ from typing import List
 import factory
 from faker import Faker
 
-from rcs_pydantic import enums, errors, scheme
+from rcs_pydantic_automata import enums, errors, scheme
 
 fake = Faker()
 

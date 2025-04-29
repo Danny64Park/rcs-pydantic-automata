@@ -43,13 +43,13 @@ pip install rcs-pydantic-automata
 
 ## Dependency
 
-- python3.x (3.8 이상)
+- python3.x (3.11 이상)
 - pydantic
 
 ## Quick start
 
 ```py
-from rcs_pydantic import MessageInfo, RcsMessage
+from rcs_pydantic_automata import MessageInfo, RcsMessage
 
 message_info = {
     "replyId": "B01RDSFR.KcNNLk67ui.FDSAF432153214",
