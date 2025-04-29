@@ -1,7 +1,7 @@
 import uuid
 from typing import Optional, Union
 
-from rcs_pydantic import enums
+from rcs_pydantic_automata import enums
 
 from . import scheme
 
